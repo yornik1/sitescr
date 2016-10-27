@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Top photos</title>
+    </head>
+    <body>
+        <h1><a href="/">back</a></h1>
+        <h1>Photos ({{ photos.count }}):</h1>
+            <ol>
+            {% for p in photos %}
+                <li><a href='{{ p.url }}'> {{p.url}} </a> </li>
+                <p><img src="{{ p.url }}" width="320" height="320"></p>
+                {{p.likes}} {{p.comments}}
+            {% endfor %}
+            </ol>
+    </body>
+</html>
